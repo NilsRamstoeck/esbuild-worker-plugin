@@ -1,0 +1,33 @@
+{
+  "name": "esbuild-worker-plugin",
+  "version": "1.0.0",
+  "description": "A Plugin for ESBuild that allows importing workers as functions while keeping the workers in separate bundles.",
+  "main": "./WorkerPlugin.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "cd example && node build.mjs && serve dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NilsRamstoeck/esbuild-worker-plugin.git"
+  },
+  "keywords": [
+    "esbuild",
+    "typescript",
+    "worker"
+  ],
+  "author": "Nils Ramstoeck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NilsRamstoeck/esbuild-worker-plugin/issues"
+  },
+  "homepage": "https://github.com/NilsRamstoeck/esbuild-worker-plugin#readme",
+  "dependencies": {
+    "esbuild": "^0.19.1",
+    "serve": "^14.2.0",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.10"
+  }
+}
