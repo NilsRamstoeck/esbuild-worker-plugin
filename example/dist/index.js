@@ -1,5 +1,7 @@
 // worker://worker/example.worker.ts
-var example_worker_default = (opts) => new (opts.shared ? SharedWorker : Worker)("/worker/example.worker.js", opts.options);
+var WorkerConstructor = (opts) => new (opts.shared ? SharedWorker : Worker)("/worker/example.worker.js", opts.options);
+WorkerConstructor.path = "/worker/example.worker.js";
+var example_worker_default = WorkerConstructor;
 
 // index.ts
 var myWorker = example_worker_default({ options: { name: "ExampleWorker" } });
@@ -9,3 +11,4 @@ myWorker.onmessage = (e) => {
 };
 myWorker.postMessage("Hello World");
 console.log(example_worker_default({ options: {}, shared: true }));
+console.log(example_worker_default.path);

@@ -10,7 +10,7 @@ declare module 'esbuild-worker-plugin' {
     ({ options?: SharedWorkerOptions, shared: true; }) |
     { options?: WorkerOptions, shared?: false; };
 
-  export type WorkerConstructor = (options?: WorkerConstructorParams) => Worker;
+  export type WorkerConstructor = ((options?: WorkerConstructorParams) => Worker) & { path: string; };
 
   export const WorkerPlugin: (opts: WorkerPluginOptions) => import('esbuild').Plugin;
 }

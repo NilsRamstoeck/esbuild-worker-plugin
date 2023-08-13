@@ -18,3 +18,6 @@ myWorker.postMessage("Hello World");
 //You can also create a shared worker like this
 console.log(ExampleWorker({ options: {}, shared: true }));
 
+//And get the absolute path to the worker file like this
+console.log(ExampleWorker.path);
+
