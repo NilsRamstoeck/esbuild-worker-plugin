@@ -5,7 +5,7 @@ export const WorkerPlugin = ({ workerOutdir }) => ({
   name: 'WorkerPlugin',
   setup: (pluginBuild) => {
     pluginBuild.onLoad({ filter: /.*\.worker\.[tj]s$/, namespace: 'worker' }, ({ pluginData: { workerPath } }) => {
-      const result = { contents: /*javascript*/`const WorkerConstructor = (opts) => new (opts.shared?SharedWorker:Worker)('${workerPath}', opts.options);WorkerConstructor.path = '${workerPath}';export default WorkerConstructor` };
+      const result = { contents: /*javascript*/`const WorkerConstructor = (opts) => new (opts.shared?SharedWorker:Worker)('${workerPath}', opts.options);WorkerConstructor.path = '${workerPath}';export default WorkerConstructor;` };
       return result;
     });
 
