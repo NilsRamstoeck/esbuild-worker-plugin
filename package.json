@@ -1,6 +1,6 @@
 {
   "name": "esbuild-worker-plugin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Plugin for ESBuild that allows importing workers as functions while keeping the workers in separate bundles.",
   "main": "./WorkerPlugin.mjs",
   "type": "module",
@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/NilsRamstoeck/esbuild-worker-plugin#readme",
   "peerDependencies": {
-    "esbuild": "^0.19.1"
+    "esbuild": "^0.20.1"
   },
   "devDependencies": {
-    "@types/node": "^20.4.10",
-    "serve": "^14.2.0",
-    "typescript": "^5.1.6"
+    "@types/node": "^20.11.25",
+    "serve": "^14.2.1",
+    "typescript": "^5.4.2"
   }
 }
